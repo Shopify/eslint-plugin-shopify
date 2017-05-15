@@ -23,7 +23,8 @@
 - New rule: [`react/forbid-foreign-prop-types`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-foreign-prop-types.md)
 - New rule: [`react/no-will-update-set-state`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-will-update-set-state.md)
 - New rule: [`react/void-dom-elements-no-children`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/void-dom-elements-no-children.md)
-- Added eslint's [`no-await-in-loop`](http://eslint.org/docs/rules/no-await-in-loop)
+- Added ESLint rules: [`no-await-in-loop`](http://eslint.org/docs/rules/no-await-in-loop), [`prefer-promise-reject-errors`](http://eslint.org/docs/rules/prefer-promise-reject-errors), [`require-await`](http://eslint.org/docs/rules/require-await) (disabled), [`prefer-destructuring`](http://eslint.org/docs/rules/prefer-destructuring), [`no-compare-neg-zero`](http://eslint.org/docs/rules/no-compare-neg-zero),
+[`capitalized-comments`](http://eslint.org/docs/rules/capitalized-comments) (disabled), [`no-multi-assign`](http://eslint.org/docs/rules/no-multi-assign), [`nonblock-statement-body-position`](http://eslint.org/docs/rules/nonblock-statement-body-position) (disabled), [`template-tag-spacing`](http://eslint.org/docs/rules/template-tag-spacing) (disabled)
 
 ### Removed
 - Deprecated: [`babel/no-await-in-loop`](https://github.com/babel/eslint-plugin-babel/releases/tag/v4.1.1)
