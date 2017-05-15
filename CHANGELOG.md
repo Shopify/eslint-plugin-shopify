@@ -1,7 +1,7 @@
 # Changelog
 
 ## [Unreleased]
-## [16.0.0] - 2017-05-11
+## [16.0.0] - 2017-05-15
 
 ### Added
 - New rule: [`babel/semi`](https://github.com/babel/eslint-plugin-babel/releases/tag/v4.1.0)
