@@ -32,7 +32,7 @@
 - New rule: [`capitalized-comments`](http://eslint.org/docs/rules/capitalized-comments) (disabled)
 - New rule: [`no-multi-assign`](http://eslint.org/docs/rules/no-multi-assign)
 - New rule: [`nonblock-statement-body-position`](http://eslint.org/docs/rules/nonblock-statement-body-position) (disabled)
-- New rule: [`template-tag-spacing`](http://eslint.org/docs/rules/template-tag-spacing) (disabled)
+- New rule: [`template-tag-spacing`](http://eslint.org/docs/rules/template-tag-spacing)
 
 ### Removed
 - Deprecated: [`babel/no-await-in-loop`](https://github.com/babel/eslint-plugin-babel/releases/tag/v4.1.1)
