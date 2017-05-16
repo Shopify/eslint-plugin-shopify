@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 
-## [16.0.0] - 2017-05-15
+## [16.0.0] - 2017-05-16
 ### Added
 - New rule: [`babel/semi`](https://github.com/babel/eslint-plugin-babel/releases/tag/v4.1.0)
 - New rule: [`flowtype/no-types-missing-file-annotation`](https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-no-types-missing-file-annotation)
