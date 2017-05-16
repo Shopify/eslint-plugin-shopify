@@ -26,7 +26,7 @@
 - New rule: [`react/void-dom-elements-no-children`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/void-dom-elements-no-children.md)
 - New rule: [`no-await-in-loop`](http://eslint.org/docs/rules/no-await-in-loop)
 - New rule: [`prefer-promise-reject-errors`](http://eslint.org/docs/rules/prefer-promise-reject-errors)
-- New rule: [`require-await`](http://eslint.org/docs/rules/require-await) (disabled)
+- New rule: [`require-await`](http://eslint.org/docs/rules/require-await)
 - New rule: [`prefer-destructuring`](http://eslint.org/docs/rules/prefer-destructuring)
 - New rule: [`no-compare-neg-zero`](http://eslint.org/docs/rules/no-compare-neg-zero)
 - New rule: [`capitalized-comments`](http://eslint.org/docs/rules/capitalized-comments) (disabled)
