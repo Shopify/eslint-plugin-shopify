@@ -47,7 +47,6 @@
     "babel-preset-shopify": "^16.1.0",
     "eslint": "^4.3.0",
     "eslint-index": "^1.4.0",
-    "eslint-plugin-shopify": "file:.",
     "isparta": "^4.0.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.4.2",
