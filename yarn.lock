@@ -1404,7 +1404,7 @@ eslint-plugin-flowtype@^2.32.1:
   dependencies:
     lodash "^4.15.0"
 
-eslint-plugin-import@^2.2.0:
+eslint-plugin-import@^2.2.0, eslint-plugin-import@^2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.7.0.tgz#21de33380b9efb55f5ef6d2e210ec0e07e7fa69f"
   dependencies:
@@ -1456,14 +1456,6 @@ eslint-plugin-promise@^3.5.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-3.5.0.tgz#78fbb6ffe047201627569e85a6c5373af2a68fca"
 
-eslint-plugin-react@^7.2.0:
-  version "7.2.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.2.1.tgz#c2673526ed6571b08c69c5f453d03f5f13e8ddbe"
-  dependencies:
-    doctrine "^2.0.0"
-    has "^1.0.1"
-    jsx-ast-utils "^2.0.0"
-
 eslint-plugin-react@^7.3.0:
   version "7.3.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.3.0.tgz#ca9368da36f733fbdc05718ae4e91f778f38e344"
@@ -1487,7 +1479,7 @@ eslint-plugin-react@^7.3.0:
     eslint-plugin-mocha "^4.11.0"
     eslint-plugin-node "^5.1.1"
     eslint-plugin-promise "^3.5.0"
-    eslint-plugin-react "^7.2.0"
+    eslint-plugin-react "^7.3.0"
     eslint-plugin-sort-class-members "^1.2.0"
     merge "^1.2.0"
 
