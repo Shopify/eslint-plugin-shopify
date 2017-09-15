@@ -67,7 +67,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-lodash": "^2.4.4",
     "eslint-plugin-mocha": "^4.11.0",
-    "eslint-plugin-node": "^4.2.3",
+    "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.2.0",
     "eslint-plugin-sort-class-members": "^1.2.0",
