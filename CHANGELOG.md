@@ -19,8 +19,8 @@
   - `react/no-typos`
   - `react/no-unused-state`
   - `react/jsx-closing-tag-location`
-  - `array-bracket-newline`
-  - `array-element-newline`
+  - `array-bracket-newline` (disabled)
+  - `array-element-newline` (disabled)
   - `function-paren-newline`
   - `padding-line-between-statements` (disabled)
   - `semi-style`
