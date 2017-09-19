@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 
-## [17.1.0] - 2017-09-18
+## [17.1.0] - 2017-09-19
 
 ### Added
 * New rules ([#41](https://github.com/Shopify/eslint-plugin-shopify/pull/41)):
@@ -36,6 +36,9 @@
   - `eslint-plugin-node`
   - `eslint-plugin-react`
 - `jquery-dollar-sign-reference` no longer flags assignments from `await` expressions
+
+### Removed
+- `jsx-a11y/href-no-hash` replaced with `jsx-a11y/anchor-is-valid`
 
 ## [17.0.0] - 2017-08-17
 ### Changed
