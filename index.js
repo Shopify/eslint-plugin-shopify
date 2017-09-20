@@ -25,5 +25,6 @@ module.exports = {
     node: require('./lib/config/node'),
     react: require('./lib/config/react'),
     typescript: require('./lib/config/typescript'),
+    typescriptReact: require('./lib/config/typescriptReact'),
   },
 };
