@@ -78,6 +78,8 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.3.0",
     "eslint-plugin-sort-class-members": "^1.2.0",
-    "merge": "^1.2.0"
+    "eslint-plugin-typescript": "^0.7.0",
+    "merge": "^1.2.0",
+    "typescript-eslint-parser": "^8.0.0"
   }
 }
