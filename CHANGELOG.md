@@ -4,7 +4,7 @@
 
 ### Changed
 * `space-before-function-paren` now uses `asyncArrow` option (eg. `async () => {}`)
-
+* `lines-around-directive` was deprecated in ESLint `v4.0.0`.
 ## [17.1.0] - 2017-09-19
 
 ### Added
