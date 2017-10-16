@@ -18,7 +18,7 @@
     "rules-status": "eslint-index lib/config/all.js  --format table",
     "rules-omitted": "eslint-index lib/config/all.js  --status omitted",
     "lint": "eslint . --max-warnings 0",
-    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "prettier-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "test": "NODE_PATH=$NODE_PATH:./transforms:./tests mocha 'tests/**/*.js' --reporter spec --compilers js:babel-core/register",
     "test:watch": "yarn test -- --watch --reporter min",
     "test:cover": "babel-node node_modules/.bin/isparta cover --report text --report html _mocha -- --reporter spec --recursive tests/"
