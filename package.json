@@ -18,7 +18,6 @@
     "rules-status": "eslint-index lib/config/all.js  --format table",
     "rules-omitted": "eslint-index lib/config/all.js  --status omitted",
     "lint": "eslint . --max-warnings 0",
-    "format": "prettier --write --single-quote --no-bracket-spacing --trailing-comma es5 './**/*.js'",
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "test": "NODE_PATH=$NODE_PATH:./transforms:./tests mocha 'tests/**/*.js' --reporter spec --compilers js:babel-core/register",
     "test:watch": "yarn test -- --watch --reporter min",
