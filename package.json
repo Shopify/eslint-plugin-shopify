@@ -58,6 +58,9 @@
   "peerDependencies": {
     "eslint": "<5 >=4.7.1"
   },
+  "optionalDependencies": {
+    "prettier": "<2.0 >= 1.7.2"
+  },
   "dependencies": {
     "babel-eslint": "^8.0.0",
     "eslint-config-prettier": "^2.6.0",
