@@ -51,16 +51,14 @@
     "isparta": "^4.0.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.4.2",
-    "prettier": "^1.7.2",
+    "prettier": "^1.8.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
   "peerDependencies": {
     "eslint": "<5 >=4.7.1"
   },
-  "optionalDependencies": {
-    "prettier": "<2.0 >= 1.7.2"
-  },
+  "optionalDependencies": {},
   "dependencies": {
     "babel-eslint": "^8.0.0",
     "eslint-config-prettier": "^2.6.0",

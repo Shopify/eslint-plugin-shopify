@@ -1505,7 +1505,7 @@ eslint-plugin-react@^7.3.0:
     prop-types "^15.5.10"
 
 "eslint-plugin-shopify@file:./.":
-  version "17.2.0-alpha.1"
+  version "18.0.0"
   dependencies:
     babel-eslint "^8.0.0"
     eslint-config-prettier "^2.6.0"
@@ -1522,9 +1522,9 @@ eslint-plugin-react@^7.3.0:
     eslint-plugin-promise "^3.5.0"
     eslint-plugin-react "^7.3.0"
     eslint-plugin-sort-class-members "^1.2.0"
+    eslint-plugin-typescript "^0.7.0"
     merge "^1.2.0"
-  optionalDependencies:
-    prettier "<1.8 >= 1.7.2"
+    typescript-eslint-parser "^8.0.0"
 
 eslint-plugin-sort-class-members@^1.2.0:
   version "1.2.2"
@@ -2851,9 +2851,9 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-"prettier@<1.8 >= 1.7.2":
-  version "1.7.4"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.7.4.tgz#5e8624ae9363c80f95ec644584ecdf55d74f93fa"
+prettier@^1.8.2:
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.8.2.tgz#bff83e7fd573933c607875e5ba3abbdffb96aeb8"
 
 private@^0.1.6, private@^0.1.7:
   version "0.1.8"
@@ -3163,17 +3163,13 @@ safe-buffer@^5.0.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
 
-"semver@2 || 3 || 4 || 5", semver@^5.3.0:
+"semver@2 || 3 || 4 || 5", semver@5.4.1, semver@^5.3.0:
   version "5.4.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.4.1.tgz#e059c09d8571f0540823733433505d3a2f00b18e"
 
 semver@5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
-
-semver@5.4.1:
-  version "5.4.1"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-5.4.1.tgz#e059c09d8571f0540823733433505d3a2f00b18e"
 
 set-blocking@^2.0.0, set-blocking@~2.0.0:
   version "2.0.0"

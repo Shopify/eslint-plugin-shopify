@@ -14,7 +14,9 @@ const parserOptions = {
 };
 
 const options = [['lodash']];
-const message = `Unexpected full import of restricted module '${options[0][0]}'.`;
+const message = `Unexpected full import of restricted module '${
+  options[0][0]
+}'.`;
 
 ruleTester.run('restrict-full-import', rule, {
   valid: [
