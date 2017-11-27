@@ -1505,7 +1505,7 @@ eslint-plugin-react@^7.3.0:
     prop-types "^15.5.10"
 
 "eslint-plugin-shopify@file:./.":
-  version "18.0.0"
+  version "18.1.0-alpha.1"
   dependencies:
     babel-eslint "^8.0.0"
     eslint-config-prettier "^2.6.0"
@@ -1524,7 +1524,6 @@ eslint-plugin-react@^7.3.0:
     eslint-plugin-sort-class-members "^1.2.0"
     eslint-plugin-typescript "^0.7.0"
     merge "^1.2.0"
-    typescript-eslint-parser "^8.0.0"
 
 eslint-plugin-sort-class-members@^1.2.0:
   version "1.2.2"
@@ -3444,9 +3443,9 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typescript-eslint-parser@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/typescript-eslint-parser/-/typescript-eslint-parser-8.0.0.tgz#81f70bbffca1139c1dc5a1301208a7fd8213f8b2"
+typescript-eslint-parser-fork@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/typescript-eslint-parser-fork/-/typescript-eslint-parser-fork-0.0.1.tgz#aa82a841f83f821e4873b2c55bfe21f42fd87dff"
   dependencies:
     lodash.unescape "4.0.1"
     semver "5.4.1"
