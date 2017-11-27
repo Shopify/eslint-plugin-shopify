@@ -77,6 +77,6 @@
     "eslint-plugin-sort-class-members": "^1.2.0",
     "eslint-plugin-typescript": "^0.7.0",
     "merge": "^1.2.0",
-    "typescript-eslint-parser": "^8.0.0"
+    "typescript-eslint-parser-fork": "^0.0.1"
   }
 }
