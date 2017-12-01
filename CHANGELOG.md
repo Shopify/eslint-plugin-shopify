@@ -1,6 +1,8 @@
 # Changelog
 
-## [Unreleased]
+<!-- ## Unreleased -->
+
+## [18.1.0] - 2017-10-31
 
 ### Added
 * Added a `typescript` and `typescript-react` config [[#54](https://github.com/Shopify/eslint-plugin-shopify/pull/54)]
