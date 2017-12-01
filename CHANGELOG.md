@@ -7,6 +7,8 @@
 
 ### Changed
 
+* `plugin:shopify/prettier` will now enforce trailing commas in function
+  parameter calls
 * `comma-dangle` will now enforce multi-line function parameters
 * Removed `plugin:shopify/esnext` as an included extension of the
   `plugin:shopify/prettier` config. `plugin:shopify/esnext` must now be extended
