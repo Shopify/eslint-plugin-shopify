@@ -9,10 +9,12 @@ require('typescript-eslint-parser');
 const babelParser = 'babel-eslint';
 const typeScriptParser = 'typescript-eslint-parser';
 
-const errors = [{
-  type: 'ClassDeclaration',
-  message: 'You declared a type for state, but did not initialize state.',
-}];
+const errors = [
+  {
+    type: 'ClassDeclaration',
+    message: 'You declared a type for state, but did not initialize state.',
+  },
+];
 
 ruleTester.run('react-initialize-state', rule, {
   valid: [
@@ -119,7 +121,8 @@ ruleTester.run('react-initialize-state', rule, {
   ],
   invalid: [
     {
-      code: 'class Button extends React.Component<Props, {focused: boolean}> {}',
+      code:
+        'class Button extends React.Component<Props, {focused: boolean}> {}',
       parser: babelParser,
       errors,
     },
@@ -156,7 +159,8 @@ ruleTester.run('react-initialize-state', rule, {
       errors,
     },
     {
-      code: 'class Button extends React.Component<Props, {focused: boolean}> {}',
+      code:
+        'class Button extends React.Component<Props, {focused: boolean}> {}',
       parser: typeScriptParser,
       errors,
     },
