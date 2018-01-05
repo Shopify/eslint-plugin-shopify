@@ -12,7 +12,7 @@ const typeScriptParser = 'typescript-eslint-parser';
 const errors = [
   {
     type: 'ClassDeclaration',
-    message: 'You declared a type for state, but did not initialize state.',
+    message: 'You declared a type for state, but did not initialize it.',
   },
 ];
 
@@ -39,6 +39,10 @@ ruleTester.run('react-initialize-state', rule, {
       parser: babelParser,
     },
     {
+      code: 'class Button extends React.Component<Props, any> {}',
+      parser: babelParser,
+    },
+    {
       code: `class Button extends React.Component<Props, {focused: boolean}> {
         state = {focused: false};
       }`,
@@ -68,6 +72,14 @@ ruleTester.run('react-initialize-state', rule, {
       code: `class Button extends React.Component<Props, State> {
         constructor() {
           this.state = getState();
+        }
+      }`,
+      parser: babelParser,
+    },
+    {
+      code: `class Button extends React.Component<Props, State> {
+        constructor() {
+          (this: any).state = {};
         }
       }`,
       parser: babelParser,
@@ -85,6 +97,10 @@ ruleTester.run('react-initialize-state', rule, {
       parser: typeScriptParser,
     },
     {
+      code: 'class Button extends React.Component<Props, any> {}',
+      parser: typeScriptParser,
+    },
+    {
       code: `class Button extends React.Component<Props, {focused: boolean}> {
         state = {focused: false};
       }`,
@@ -114,6 +130,14 @@ ruleTester.run('react-initialize-state', rule, {
       code: `class Button extends React.Component<Props, State> {
         constructor() {
           this.state = getState();
+        }
+      }`,
+      parser: typeScriptParser,
+    },
+    {
+      code: `class Button extends React.Component<Props, State> {
+        constructor() {
+          (this as any).state = {};
         }
       }`,
       parser: typeScriptParser,
@@ -159,6 +183,14 @@ ruleTester.run('react-initialize-state', rule, {
       errors,
     },
     {
+      code: `
+        class Button extends React.Component<Props, State> {}
+        class OtherClass {}
+      `,
+      parser: babelParser,
+      errors,
+    },
+    {
       code:
         'class Button extends React.Component<Props, {focused: boolean}> {}',
       parser: typeScriptParser,
@@ -193,6 +225,14 @@ ruleTester.run('react-initialize-state', rule, {
           this.states = {focused: true};
         }
       }`,
+      parser: typeScriptParser,
+      errors,
+    },
+    {
+      code: `
+        class Button extends React.Component<Props, State> {}
+        class OtherClass {}
+      `,
       parser: typeScriptParser,
       errors,
     },
