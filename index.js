@@ -10,6 +10,7 @@ module.exports = {
     'prefer-early-return': require('./lib/rules/prefer-early-return'),
     'prefer-module-scope-constants': require('./lib/rules/prefer-module-scope-constants'),
     'prefer-twine': require('./lib/rules/prefer-twine'),
+    'react-initialize-state': require('./lib/rules/react-initialize-state'),
     'restrict-full-import': require('./lib/rules/restrict-full-import'),
     'sinon-no-restricted-features': require('./lib/rules/sinon-no-restricted-features'),
     'sinon-prefer-meaningful-assertions': require('./lib/rules/sinon-prefer-meaningful-assertions'),
