@@ -115,6 +115,7 @@ This plugin provides the following custom rules, which are included as appropria
 - [binary-assignment-parens](docs/rules/binary-assignment-parens.md): Requires (or disallows) assignments of binary, boolean-producing expressions to be wrapped in parentheses.
 - [class-property-semi](docs/rules/class-property-semi.md): Requires (or disallows) semicolons for class properties.
 - [jquery-dollar-sign-reference](docs/rules/jquery-dollar-sign-reference.md): Requires that all jQuery objects are assigned to references prefixed with `$`.
+- [jsx-no-hardcoded-content](docs/rules/jsx-no-hardcoded-content.md): Disallows hardcoded content in JSX.
 - [no-useless-computed-properties](docs/rules/no-useless-computed-properties.md): Prevents the usage of unnecessary computed properties.
 - [prefer-class-properties](docs/rules/prefer-class-properties.md): Prefer class properties to assignment of literals in constructors.
 - [prefer-early-return](docs/rules/prefer-early-return.md): Prefer early returns over full-body conditional wrapping in function declarations.
