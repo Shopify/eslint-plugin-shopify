@@ -33,7 +33,6 @@ function fixtureFile(fixture) {
 }
 
 const allowStrings = {allowStrings: true};
-const disallowBooleans = {allowBooleans: false};
 const disallowNumbers = {allowNumbers: false};
 const checkProps = {checkProps: ['foo']};
 
@@ -164,47 +163,6 @@ ruleTester.run('react-no-hardcoded-strings', rule, {
         {
           modules: {
             'my-module': {OtherComponent: disallowNumbers},
-          },
-        },
-      ],
-    },
-    {
-      code: '<MyComponent>{true}</MyComponent>',
-      parser,
-      options: [
-        {
-          modules: {
-            'my-module': {MyComponent: disallowBooleans},
-          },
-        },
-      ],
-    },
-    {
-      code: `
-        import {MyComponent} from 'other-module';
-        <MyComponent>{true}</MyComponent>
-      `,
-      parser,
-      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
-      options: [
-        {
-          modules: {
-            'my-module': {MyComponent: disallowBooleans},
-          },
-        },
-      ],
-    },
-    {
-      code: `
-        import {MyComponent} from 'my-module';
-        <MyComponent>{true}</MyComponent>
-      `,
-      parser,
-      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
-      options: [
-        {
-          modules: {
-            'my-module': {OtherComponent: disallowBooleans},
           },
         },
       ],
@@ -463,28 +421,10 @@ ruleTester.run('react-no-hardcoded-strings', rule, {
       errors: errorsFor('MyComponent', 'children'),
     },
     {
-      code: '<MyComponent>{true}</MyComponent>',
-      parser,
-      options: [disallowBooleans],
-      errors: errorsFor('MyComponent', 'children'),
-    },
-    {
       code: '<MyComponent>{3}</MyComponent>',
       parser,
       options: [disallowNumbers],
       errors: errorsFor('MyComponent', 'children'),
-    },
-    {
-      code: '<MyComponent foo />',
-      parser,
-      options: [{...checkProps, ...disallowBooleans}],
-      errors: errorsFor('MyComponent', 'foo'),
-    },
-    {
-      code: '<MyComponent foo={false} />',
-      parser,
-      options: [{...checkProps, ...disallowBooleans}],
-      errors: errorsFor('MyComponent', 'foo'),
     },
     {
       code: '<MyComponent foo={42} />',
