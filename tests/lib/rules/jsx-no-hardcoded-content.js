@@ -1,19 +1,12 @@
 const {RuleTester} = require('eslint');
 const {resolve} = require('path');
-const rule = require('../../../lib/rules/react-no-hardcoded-strings');
+const rule = require('../../../lib/rules/jsx-no-hardcoded-content');
 
 const ruleTester = new RuleTester();
 
 require('babel-eslint');
 
 const parser = 'babel-eslint';
-
-// const errors = [
-//   {
-//     type: 'ClassDeclaration',
-//     message: 'You declared a type for state, but did not initialize it.',
-//   },
-// ];
 
 function errorsFor(component, prop) {
   const message =
@@ -36,7 +29,7 @@ const allowStrings = {allowStrings: true};
 const disallowNumbers = {allowNumbers: false};
 const checkProps = {checkProps: ['foo']};
 
-ruleTester.run('react-no-hardcoded-strings', rule, {
+ruleTester.run('jsx-no-hardcoded-content', rule, {
   valid: [
     {code: '<div />', parser},
     {code: '<MyComponent />', parser},
