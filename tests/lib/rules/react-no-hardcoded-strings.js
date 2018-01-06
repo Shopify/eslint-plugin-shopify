@@ -144,6 +144,7 @@ ruleTester.run('react-no-hardcoded-strings', rule, {
         <MyComponent>{42}</MyComponent>
       `,
       parser,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
       options: [
         {
           modules: {
@@ -158,6 +159,7 @@ ruleTester.run('react-no-hardcoded-strings', rule, {
         <MyComponent>{42}</MyComponent>
       `,
       parser,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
       options: [
         {
           modules: {
@@ -183,6 +185,7 @@ ruleTester.run('react-no-hardcoded-strings', rule, {
         <MyComponent>{true}</MyComponent>
       `,
       parser,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
       options: [
         {
           modules: {
@@ -197,6 +200,7 @@ ruleTester.run('react-no-hardcoded-strings', rule, {
         <MyComponent>{true}</MyComponent>
       `,
       parser,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
       options: [
         {
           modules: {
@@ -222,6 +226,7 @@ ruleTester.run('react-no-hardcoded-strings', rule, {
         <MyComponent foo="bar" />
       `,
       parser,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
       options: [
         {
           modules: {
@@ -236,6 +241,7 @@ ruleTester.run('react-no-hardcoded-strings', rule, {
         <MyComponent foo="bar" />
       `,
       parser,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
       options: [
         {
           modules: {
@@ -250,6 +256,7 @@ ruleTester.run('react-no-hardcoded-strings', rule, {
         <MyComponent>Content</MyComponent>
       `,
       parser,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
       options: [
         {
           modules: {
@@ -264,6 +271,7 @@ ruleTester.run('react-no-hardcoded-strings', rule, {
         <Aliased>Content</Aliased>
       `,
       parser,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
       options: [
         {
           modules: {
@@ -279,6 +287,7 @@ ruleTester.run('react-no-hardcoded-strings', rule, {
         <MyComponent>{42}</MyComponent>
       `,
       parser,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
       options: [
         {
           modules: {
@@ -304,7 +313,7 @@ ruleTester.run('react-no-hardcoded-strings', rule, {
       options: [
         {
           modules: {
-            'app/components': {MySharedComponent: allowStrings},
+            'app/components': {MyComponent: allowStrings},
           },
         },
       ],
@@ -320,6 +329,108 @@ ruleTester.run('react-no-hardcoded-strings', rule, {
         {
           modules: {
             'app/sections/MySection/components': {MyComponent: allowStrings},
+          },
+        },
+      ],
+    },
+    {
+      code: `
+        import {MyComponent} from './weird.components.js';
+        <MyComponent>Content</MyComponent>
+      `,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
+      parser,
+      options: [
+        {
+          modules: {
+            'app/sections/MySection/weird.components': {
+              MyComponent: allowStrings,
+            },
+          },
+        },
+      ],
+    },
+    {
+      code: `
+        import MyComponent from './components';
+        <MyComponent>Content</MyComponent>
+      `,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
+      parser,
+      options: [
+        {
+          modules: {
+            'app/sections/MySection/components': {
+              default: allowStrings,
+            },
+          },
+        },
+      ],
+    },
+    {
+      code: `
+        import {default as MyComponent} from './components';
+        <MyComponent>Content</MyComponent>
+      `,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
+      parser,
+      options: [
+        {
+          modules: {
+            'app/sections/MySection/components': {
+              default: allowStrings,
+            },
+          },
+        },
+      ],
+    },
+    {
+      code: `
+        import * as Polaris from '@shopify/polaris';
+        <Polaris.MyComponent>Content</Polaris.MyComponent>
+      `,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
+      parser,
+      options: [
+        {
+          modules: {
+            '@shopify/polaris': {
+              MyComponent: allowStrings,
+            },
+          },
+        },
+      ],
+    },
+    {
+      code: `
+        import {MyComponent} from '@shopify/polaris';
+        <MyComponent.Subcomponent>Content</MyComponent.Subcomponent>
+      `,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
+      parser,
+      options: [
+        {
+          modules: {
+            '@shopify/polaris': {
+              'MyComponent.Subcomponent': allowStrings,
+            },
+          },
+        },
+      ],
+    },
+    {
+      code: `
+        import MyComponent from '@shopify/polaris';
+        <MyComponent.Subcomponent>Content</MyComponent.Subcomponent>
+      `,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
+      parser,
+      options: [
+        {
+          modules: {
+            '@shopify/polaris': {
+              'default.Subcomponent': allowStrings,
+            },
           },
         },
       ],
@@ -411,6 +522,7 @@ ruleTester.run('react-no-hardcoded-strings', rule, {
         <MyComponent>Content</MyComponent>
       `,
       parser,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
       options: [
         {
           modules: {
@@ -426,6 +538,7 @@ ruleTester.run('react-no-hardcoded-strings', rule, {
         <MyComponent>Content</MyComponent>
       `,
       parser,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
       options: [
         {
           ...allowStrings,
@@ -442,6 +555,7 @@ ruleTester.run('react-no-hardcoded-strings', rule, {
         <Aliased>Content</Aliased>
       `,
       parser,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
       options: [
         {
           modules: {
@@ -458,6 +572,7 @@ ruleTester.run('react-no-hardcoded-strings', rule, {
         <MyComponent>Content</MyComponent>
       `,
       parser,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
       options: [
         {
           modules: {
@@ -466,6 +581,204 @@ ruleTester.run('react-no-hardcoded-strings', rule, {
         },
       ],
       errors: errorsFor('MyComponent', 'children'),
+    },
+    {
+      code: `
+        import {MyComponent} from './weird.components.js';
+        <MyComponent>Content</MyComponent>
+      `,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
+      parser,
+      options: [
+        {
+          modules: {
+            'app/sections/MySection/weird.components': {
+              OtherComponent: allowStrings,
+            },
+          },
+        },
+      ],
+      errors: errorsFor('MyComponent', 'children'),
+    },
+    {
+      code: `
+        import {MyComponent} from './weird.components.js';
+        <MyComponent>Content</MyComponent>
+      `,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
+      parser,
+      options: [
+        {
+          modules: {
+            'app/sections/MySection/other.components': {
+              MyComponent: allowStrings,
+            },
+          },
+        },
+      ],
+      errors: errorsFor('MyComponent', 'children'),
+    },
+    {
+      code: `
+        import {OtherComponent as MyComponent} from './weird.components.js';
+        <MyComponent>Content</MyComponent>
+      `,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
+      parser,
+      options: [
+        {
+          modules: {
+            'app/sections/MySection/weird.components': {
+              MyComponent: allowStrings,
+            },
+          },
+        },
+      ],
+      errors: errorsFor('MyComponent', 'children'),
+    },
+    {
+      code: `
+        import MyComponent from './components';
+        <MyComponent>{42}</MyComponent>
+      `,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
+      parser,
+      options: [
+        {
+          modules: {
+            'app/sections/MySection/components': {
+              default: disallowNumbers,
+            },
+          },
+        },
+      ],
+      errors: errorsFor('MyComponent', 'children'),
+    },
+    {
+      code: `
+        import {default as MyComponent} from './components';
+        <MyComponent>{42}</MyComponent>
+      `,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
+      parser,
+      options: [
+        {
+          modules: {
+            'app/sections/MySection/components': {
+              default: disallowNumbers,
+            },
+          },
+        },
+      ],
+      errors: errorsFor('MyComponent', 'children'),
+    },
+    {
+      code: `
+        import * as Polaris from '@shopify/polaris';
+        <Polaris.MyComponent>Content</Polaris.MyComponent>
+      `,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
+      parser,
+      options: [
+        {
+          modules: {
+            '@shopify/polaris': {
+              OtherComponent: allowStrings,
+            },
+          },
+        },
+      ],
+      errors: errorsFor('Polaris.MyComponent', 'children'),
+    },
+    {
+      code: `
+        import * as Polaris from '@shopify/polaris';
+        <Polaris.MyComponent>{42}</Polaris.MyComponent>
+      `,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
+      parser,
+      options: [
+        {
+          modules: {
+            '@shopify/polaris': {
+              MyComponent: disallowNumbers,
+            },
+          },
+        },
+      ],
+      errors: errorsFor('Polaris.MyComponent', 'children'),
+    },
+    {
+      code: `
+        import {MyComponent} from '@shopify/polaris';
+        <MyComponent.Subcomponent>{42}</MyComponent.Subcomponent>
+      `,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
+      parser,
+      options: [
+        {
+          modules: {
+            '@shopify/polaris': {
+              'MyComponent.Subcomponent': disallowNumbers,
+            },
+          },
+        },
+      ],
+      errors: errorsFor('MyComponent.Subcomponent', 'children'),
+    },
+    {
+      code: `
+        import {MyComponent} from '@shopify/polaris';
+        <MyComponent.Subcomponent>Content</MyComponent.Subcomponent>
+      `,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
+      parser,
+      options: [
+        {
+          modules: {
+            '@shopify/polaris': {
+              'MyComponent.OtherSubcomponent': allowStrings,
+            },
+          },
+        },
+      ],
+      errors: errorsFor('MyComponent.Subcomponent', 'children'),
+    },
+    {
+      code: `
+        import MyComponent from '@shopify/polaris';
+        <MyComponent.Subcomponent>{42}</MyComponent.Subcomponent>
+      `,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
+      parser,
+      options: [
+        {
+          modules: {
+            '@shopify/polaris': {
+              'default.Subcomponent': disallowNumbers,
+            },
+          },
+        },
+      ],
+      errors: errorsFor('MyComponent.Subcomponent', 'children'),
+    },
+    {
+      code: `
+        import MyComponent from '@shopify/polaris';
+        <MyComponent.Subcomponent>Content</MyComponent.Subcomponent>
+      `,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
+      parser,
+      options: [
+        {
+          modules: {
+            '@shopify/polaris': {
+              'default.OtherSubcomponent': allowStrings,
+            },
+          },
+        },
+      ],
+      errors: errorsFor('MyComponent.Subcomponent', 'children'),
     },
   ],
 });
