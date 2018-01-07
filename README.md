@@ -119,6 +119,7 @@ This plugin provides the following custom rules, which are included as appropria
 - [jsx-no-complex-expressions](docs/rules/jsx-no-complex-expressions.md): Disallows complex expressions embedded in in JSX.
 - [jsx-no-hardcoded-content](docs/rules/jsx-no-hardcoded-content.md): Disallows hardcoded content in JSX.
 - [no-useless-computed-properties](docs/rules/no-useless-computed-properties.md): Prevents the usage of unnecessary computed properties.
+- [polaris-no-bare-stack-item](docs/rules/polaris-no-bare-stack-item.md): Disallow the use of Polaris’s `Stack.Item` without any custom props.
 - [polaris-prefer-sectioned-prop](docs/rules/polaris-prefer-sectioned-prop.md): Prefer the use of the `sectioned` props in Polaris components instead of wrapping all contents in a `Section` component.
 - [prefer-class-properties](docs/rules/prefer-class-properties.md): Prefer class properties to assignment of literals in constructors.
 - [prefer-early-return](docs/rules/prefer-early-return.md): Prefer early returns over full-body conditional wrapping in function declarations.
