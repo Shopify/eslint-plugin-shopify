@@ -1,5 +1,5 @@
 const {RuleTester} = require('eslint');
-const {resolve} = require('path');
+const {fixtureFile} = require('../../utilities');
 const rule = require('../../../lib/rules/jsx-no-hardcoded-content');
 
 const ruleTester = new RuleTester();
@@ -19,10 +19,6 @@ function errorsFor(component, prop) {
         } component.`;
 
   return [{type: 'JSXElement', message}];
-}
-
-function fixtureFile(fixture) {
-  return resolve(__dirname, '../../fixtures', fixture);
 }
 
 const allowStrings = {allowStrings: true};
