@@ -11,7 +11,7 @@ const errors = [
   {
     type: 'ClassProperty',
     message:
-    'Add the type of the state instance property so that it matches the second type parameter of your React component.',
+      'Add the type of the state instance property so that it matches the second type parameter of your React component.',
   },
 ];
 
