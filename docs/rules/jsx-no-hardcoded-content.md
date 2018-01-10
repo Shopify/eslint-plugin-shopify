@@ -1,6 +1,6 @@
 # Disallows hardcoded content in JSX. (jsx-no-hardcoded-content)
 
-Many JSX components accept children and other properties that are intended for UI content. In an internationalized app, you generally provide content to these components through a translation function, not directly as strings. This rule allows you to enforce that components not accept harcoded literal content.
+Many JSX components accept children and other properties that are intended for UI content. In an internationalized app, content is generally provided to these components through a translation function, not directly as strings. This rule enforces that components not accept harcoded literal content.
 
 ## Rule Details
 
@@ -14,7 +14,7 @@ With `{allowStrings: false}`, the following patterns are considered warnings:
 
 ```js
 <div>Content</div>
-<MyComponent>{someContent()}{` and ${moreContent()}`}</MyComponent>
+<MyComponent>{someContent()}{` and more content`}</MyComponent>
 ```
 
 The following patterns are not warnings:
@@ -67,7 +67,11 @@ The following patterns are not warnings:
 
 Allows you to specify custom validation logic for components in different modules. This option should be an object where:
 
-* The key is the name of the module. For node modules, simply use the name by which you would import it. For local modules, specify the root-relative path of the module (so, for example, `app/components` will set options for anything that imports from `app/components.js`/ `app/components/index.js`, regardless of the relative path used for the import itself). Note that this check will also respect any custom resolution logic used for imports specified for [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import).
+* The key is the name of the module:
+  * For node modules, simply use the name by which you would import it.
+  * For local modules, specify the root-relative path of the module (so, for example, `app/components` will set options for anything that imports from `app/components.js`/ `app/components/index.js`, regardless of the relative path used for the import itself)
+
+  Note that this check will also respect any custom resolution logic used for imports specified for [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import). Additionally, this rule will only work for imports components using a named, default, or namespace import, and not when using dynamic imports (`import('@shopify/polaris')`).
 * The value is an object where the keys are names of exported components (use `default` to refer to a default export). The values for this object are objects which have some set of the `allowStrings`, `allowNumbers`, and `checkProps` options detailed above.
 
 By default, no custom overrides are set. If you specify overrides for some components in a module, but not others, unspecified components will get the default options noted above.

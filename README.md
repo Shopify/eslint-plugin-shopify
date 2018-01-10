@@ -125,7 +125,7 @@ This plugin provides the following custom rules, which are included as appropria
 - [prefer-early-return](docs/rules/prefer-early-return.md): Prefer early returns over full-body conditional wrapping in function declarations.
 - [prefer-module-scope-constants](docs/rules/prefer-module-scope-constants.md): Prefer that screaming snake case variables always be defined using `const`, and always appear at module scope.
 - [prefer-twine](docs/rules/prefer-twine.md): Prefer Twine over Bindings as the name for twine imports.
-- [react-initialize-state](docs/rules/react-initialize-state.md): Requires that React component state be initialize when it has a non-empty type.
+- [react-initialize-state](docs/rules/react-initialize-state.md): Requires that React component state be initialized when it has a non-empty type.
 - [react-type-state](docs/rules/react-type-state.md): Requires that React component state be typed in TypeScript.
 - [restrict-full-import](docs/rules/restrict-full-import.md): Prevents importing the entirety of a package.
 - [sinon-no-restricted-features](docs/rules/sinon-no-restricted-features.md): Restricts the use of specified sinon features.

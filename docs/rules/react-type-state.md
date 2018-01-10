@@ -1,6 +1,6 @@
 # Requires that React component state be typed in TypeScript. (react-type-state)
 
-TypeScript will not correctly check your state instance property against the state declared in your type initialization unless you explicitly provide the type annotation. This rule enforces that you provide that type annotation when it detects you are initializing state in a TypeScript React component.
+TypeScript will not correctly check your state instance property against the state declared in the component’s type initialization unless an explicit type annotation is provided. This rule enforces that the type annotation is provided when it detects a meaningful state type in a TypeScript React component.
 
 ## Rule Details
 

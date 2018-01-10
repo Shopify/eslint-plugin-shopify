@@ -1,6 +1,6 @@
 # Prefer the use of the `sectioned` props in Polaris components instead of wrapping all contents in a `Section` component. (polaris-prefer-sectioned-prop)
 
-Polaris provides a convenience `sectioned` prop for some components that wraps the contents in a `Section` component. You should prefer this style over wrapping the entire contents of the component in a `Section` as it makes the component a little more readable.
+Polaris provides a convenience `sectioned` prop for some components that wraps the contents in a `Section` component. This rule enforces that the `sectioned` shorthand is used over wrapping the entire contents of the component in a `Section` subcomponent.
 
 ## Rule details
 
