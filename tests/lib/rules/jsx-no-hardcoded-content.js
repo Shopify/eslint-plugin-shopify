@@ -11,8 +11,12 @@ const parser = 'babel-eslint';
 function errorsFor(component, prop) {
   const message =
     prop === 'children'
-      ? `Do not use hardcoded content as the children of the ${component} component.`
-      : `Do not use hardcoded content in the ${prop} prop of the ${component} component.`;
+      ? `Do not use hardcoded content as the children of the ${
+          component
+        } component.`
+      : `Do not use hardcoded content in the ${prop} prop of the ${
+          component
+        } component.`;
 
   return [{type: 'JSXElement', message}];
 }
@@ -24,7 +28,19 @@ const checkProps = {checkProps: ['foo']};
 ruleTester.run('jsx-no-hardcoded-content', rule, {
   valid: [
     {code: '<div />', parser},
+    {
+      code: `<div>
+        <div />
+      </div>`,
+      parser,
+    },
     {code: '<MyComponent />', parser},
+    {
+      code: `<MyComponent>
+        <div />
+      </MyComponent>`,
+      parser,
+    },
     {code: '<MyComponent>{true}</MyComponent>', parser},
     {code: '<MyComponent>{2}</MyComponent>', parser},
     {code: '<MyComponent>{true}</MyComponent>', parser},
