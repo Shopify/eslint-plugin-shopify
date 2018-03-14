@@ -1504,7 +1504,7 @@ eslint-plugin-react@^7.5.1:
     prop-types "^15.6.0"
 
 "eslint-plugin-shopify@file:./.":
-  version "18.3.1"
+  version "19.0.0"
   dependencies:
     babel-eslint "^8.2.1"
     eslint-config-prettier "^2.9.0"
@@ -3169,6 +3169,10 @@ semver@5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
 
+semver@5.5.0:
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-5.5.0.tgz#dc4bbc7a6ca9d916dee5d43516f0092b58f7b8ab"
+
 set-blocking@^2.0.0, set-blocking@~2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/set-blocking/-/set-blocking-2.0.0.tgz#045f9782d011ae9a6803ddd382b24392b3d890f7"
@@ -3448,6 +3452,13 @@ typescript-eslint-parser@^11.0.0:
   dependencies:
     lodash.unescape "4.0.1"
     semver "5.4.1"
+
+typescript-eslint-parser@^13.0.0:
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/typescript-eslint-parser/-/typescript-eslint-parser-13.0.0.tgz#57f9be603d0fad7c26da76c2be67c0779d23362c"
+  dependencies:
+    lodash.unescape "4.0.1"
+    semver "5.5.0"
 
 typescript@^2.6.2:
   version "2.6.2"
