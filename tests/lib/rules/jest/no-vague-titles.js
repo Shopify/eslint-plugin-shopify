@@ -102,20 +102,26 @@ ruleTester.run('no-vague-titles', rule, {
       parser,
     },
     {
-      code: `someFunction('all')`,
+      code: `someFunction('Includes all the expected things')`,
       parser,
     },
     {
-      code: `someFunction('All')`,
+      code: `someFunction('All the expected things are included')`,
       parser,
     },
     {
-      code: `someFunction.only('all')`,
+      code: `someFunction.only('Includes all the expected things')`,
       parser,
     },
     {
       code: `(() => {})()`,
       parser,
+    },
+
+    {
+      code: "it('onAllImagesUploaded')",
+      parser,
+      errors: errorWithMethod('it'),
     },
   ],
   invalid: [
@@ -155,7 +161,7 @@ ruleTester.run('no-vague-titles', rule, {
       errors: errorWithMethod('xit'),
     },
     {
-      code: "xit('All')",
+      code: "xit('All the expected things are included')",
       parser,
       errors: errorWithMethod('xit'),
     },
@@ -165,7 +171,7 @@ ruleTester.run('no-vague-titles', rule, {
       errors: errorWithMethod('describe'),
     },
     {
-      code: "describe('all')",
+      code: "describe('Includes all the expected things')",
       parser,
       errors: errorWithMethod('describe'),
     },
@@ -190,7 +196,7 @@ ruleTester.run('no-vague-titles', rule, {
       errors: errorWithMethod('xdescribe'),
     },
     {
-      code: "xdescribe('all')",
+      code: "xdescribe('Includes all the expected things')",
       parser,
       errors: errorWithMethod('xdescribe'),
     },
@@ -232,7 +238,7 @@ ruleTester.run('no-vague-titles', rule, {
       errors: errorWithMethod('describe'),
     },
     {
-      code: "describe.only('All')",
+      code: "describe.only('Includes all the expected things')",
       parser,
       errors: errorWithMethod('describe'),
     },
@@ -263,7 +269,7 @@ ruleTester.run('no-vague-titles', rule, {
       errors: errorWithMethod('xtest'),
     },
     {
-      code: "xtest('all')",
+      code: "xtest('Includes all the expected things')",
       parser,
       errors: errorWithMethod('xtest'),
     },
@@ -468,12 +474,12 @@ ruleTester.run('no-vague-titles', rule, {
       errors: errorWithMethod('xtest'),
     },
     {
-      code: "it('all')",
+      code: "it('Includes all the expected things')",
       parser,
       errors: errorWithMethod('it'),
     },
     {
-      code: "it('All')",
+      code: "it('All the expected things are included')",
       parser,
       errors: errorWithMethod('it'),
     },
@@ -483,7 +489,7 @@ ruleTester.run('no-vague-titles', rule, {
       errors: errorWithMethod('it'),
     },
     {
-      code: "it.only('all')",
+      code: "it.only('Includes all the expected things')",
       parser,
       errors: errorWithMethod('it'),
     },
@@ -503,7 +509,7 @@ ruleTester.run('no-vague-titles', rule, {
       errors: errorWithMethod('it'),
     },
     {
-      code: "it.only('All')",
+      code: "it.only('All the expected things are included')",
       parser,
       errors: errorWithMethod('it'),
     },
@@ -513,32 +519,32 @@ ruleTester.run('no-vague-titles', rule, {
       errors: errorWithMethod('xit'),
     },
     {
-      code: "xit('all')",
+      code: "xit('Includes all the expected things')",
       parser,
       errors: errorWithMethod('xit'),
     },
     {
-      code: "describe('All')",
+      code: "describe('All the expected things are included')",
       parser,
       errors: errorWithMethod('describe'),
     },
     {
-      code: "xdescribe('All')",
+      code: "xdescribe('All the expected things are included')",
       parser,
       errors: errorWithMethod('xdescribe'),
     },
     {
-      code: "describe.only('all')",
+      code: "describe.only('Includes all the expected things')",
       parser,
       errors: errorWithMethod('describe'),
     },
     {
-      code: "test('All')",
+      code: "test('All the expected things are included')",
       parser,
       errors: errorWithMethod('test'),
     },
     {
-      code: "test.only('all')",
+      code: "test.only('Includes all the expected things')",
       parser,
       errors: errorWithMethod('test'),
     },
