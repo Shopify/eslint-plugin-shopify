@@ -102,6 +102,18 @@ ruleTester.run('no-vague-titles', rule, {
       parser,
     },
     {
+      code: `someFunction('all')`,
+      parser,
+    },
+    {
+      code: `someFunction('All')`,
+      parser,
+    },
+    {
+      code: `someFunction.only('all')`,
+      parser,
+    },
+    {
       code: `(() => {})()`,
       parser,
     },
@@ -128,31 +140,6 @@ ruleTester.run('no-vague-titles', rule, {
       errors: errorWithMethod('it'),
     },
     {
-      code: "it.only('correct')",
-      parser,
-      errors: errorWithMethod('it'),
-    },
-    {
-      code: "it.only('correctly')",
-      parser,
-      errors: errorWithMethod('it'),
-    },
-    {
-      code: "it.only('incorrect')",
-      parser,
-      errors: errorWithMethod('it'),
-    },
-    {
-      code: "it.only('Correct')",
-      parser,
-      errors: errorWithMethod('it'),
-    },
-    {
-      code: "xit('correct')",
-      parser,
-      errors: errorWithMethod('xit'),
-    },
-    {
       code: "xit('correctly')",
       parser,
       errors: errorWithMethod('xit'),
@@ -168,12 +155,17 @@ ruleTester.run('no-vague-titles', rule, {
       errors: errorWithMethod('xit'),
     },
     {
+      code: "xit('All')",
+      parser,
+      errors: errorWithMethod('xit'),
+    },
+    {
       code: "describe('correct')",
       parser,
       errors: errorWithMethod('describe'),
     },
     {
-      code: "describe('correct')",
+      code: "describe('all')",
       parser,
       errors: errorWithMethod('describe'),
     },
@@ -198,7 +190,7 @@ ruleTester.run('no-vague-titles', rule, {
       errors: errorWithMethod('xdescribe'),
     },
     {
-      code: "xdescribe('correct')",
+      code: "xdescribe('all')",
       parser,
       errors: errorWithMethod('xdescribe'),
     },
@@ -217,11 +209,13 @@ ruleTester.run('no-vague-titles', rule, {
       parser,
       errors: errorWithMethod('xdescribe'),
     },
+
     {
       code: "describe.only('correct')",
       parser,
       errors: errorWithMethod('describe'),
     },
+
     {
       code: "describe.only('correctly')",
       parser,
@@ -238,9 +232,9 @@ ruleTester.run('no-vague-titles', rule, {
       errors: errorWithMethod('describe'),
     },
     {
-      code: "test('correct')",
+      code: "describe.only('All')",
       parser,
-      errors: errorWithMethod('test'),
+      errors: errorWithMethod('describe'),
     },
     {
       code: "test('correct')",
@@ -262,13 +256,14 @@ ruleTester.run('no-vague-titles', rule, {
       parser,
       errors: errorWithMethod('test'),
     },
+
     {
       code: "xtest('correct')",
       parser,
       errors: errorWithMethod('xtest'),
     },
     {
-      code: "xtest('correct')",
+      code: "xtest('all')",
       parser,
       errors: errorWithMethod('xtest'),
     },
@@ -471,6 +466,81 @@ ruleTester.run('no-vague-titles', rule, {
       code: "xtest('Appropriate')",
       parser,
       errors: errorWithMethod('xtest'),
+    },
+    {
+      code: "it('all')",
+      parser,
+      errors: errorWithMethod('it'),
+    },
+    {
+      code: "it('All')",
+      parser,
+      errors: errorWithMethod('it'),
+    },
+    {
+      code: "it.only('correct')",
+      parser,
+      errors: errorWithMethod('it'),
+    },
+    {
+      code: "it.only('all')",
+      parser,
+      errors: errorWithMethod('it'),
+    },
+    {
+      code: "it.only('correctly')",
+      parser,
+      errors: errorWithMethod('it'),
+    },
+    {
+      code: "it.only('incorrect')",
+      parser,
+      errors: errorWithMethod('it'),
+    },
+    {
+      code: "it.only('Correct')",
+      parser,
+      errors: errorWithMethod('it'),
+    },
+    {
+      code: "it.only('All')",
+      parser,
+      errors: errorWithMethod('it'),
+    },
+    {
+      code: "xit('correct')",
+      parser,
+      errors: errorWithMethod('xit'),
+    },
+    {
+      code: "xit('all')",
+      parser,
+      errors: errorWithMethod('xit'),
+    },
+    {
+      code: "describe('All')",
+      parser,
+      errors: errorWithMethod('describe'),
+    },
+    {
+      code: "xdescribe('All')",
+      parser,
+      errors: errorWithMethod('xdescribe'),
+    },
+    {
+      code: "describe.only('all')",
+      parser,
+      errors: errorWithMethod('describe'),
+    },
+    {
+      code: "test('All')",
+      parser,
+      errors: errorWithMethod('test'),
+    },
+    {
+      code: "test.only('all')",
+      parser,
+      errors: errorWithMethod('test'),
     },
   ],
 });
