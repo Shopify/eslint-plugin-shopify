@@ -25,6 +25,10 @@ ruleTester.run('strict-component-boundaries', rule, {
       code: `import {someThing} from '../OtherComponent';`,
       parserOptions,
     },
+    {
+      code: `import someThing from './fixtures/NameGraphQLQuery/mock.json';`,
+      parserOptions,
+    },
   ],
   invalid: [
     {
