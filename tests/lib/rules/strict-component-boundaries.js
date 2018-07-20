@@ -26,7 +26,11 @@ ruleTester.run('strict-component-boundaries', rule, {
       parserOptions,
     },
     {
-      code: `import someThing from './fixtures/NameGraphQLQuery/mock.json';`,
+      code: `import someThing from '../NameOfTheQuery/mock-query.json';`,
+      parserOptions,
+    },
+    {
+      code: `import someThing from '../NameOfTheQuery/query.graphql';`,
       parserOptions,
     },
   ],
