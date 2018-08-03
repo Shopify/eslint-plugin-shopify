@@ -25,6 +25,14 @@ ruleTester.run('strict-component-boundaries', rule, {
       code: `import {someThing} from '../OtherComponent';`,
       parserOptions,
     },
+    {
+      code: `import fs from 'fs';`,
+      parserOptions,
+    },
+    {
+      code: `import eslint from 'eslint';`,
+      parserOptions,
+    },
   ],
   invalid: [
     {
