@@ -10,7 +10,7 @@ const typeScriptParser = 'typescript-eslint-parser';
 
 function errorWithName(name) {
   return {
-    type: 'Identifier',
+    type: 'TSEnumDeclaration',
     message: `Enum '${name}' should be singular.`,
   };
 }
@@ -45,6 +45,22 @@ ruleTester.run('prefer-singular-enums', rule, {
       code: `enum Pages {Products, Orders}`,
       parser: typeScriptParser,
       errors: [errorWithName('Pages')],
+    },
+    {
+      code: `enum Feet {Left, Right}`,
+      parser: typeScriptParser,
+      errors: [errorWithName('Feet')],
+    },
+
+    {
+      code: `enum People {}`,
+      parser: typeScriptParser,
+      errors: [errorWithName('People')],
+    },
+    {
+      code: `enum Children {}`,
+      parser: typeScriptParser,
+      errors: [errorWithName('Children')],
     },
   ],
 });

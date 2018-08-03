@@ -1,10 +1,10 @@
 # Prefer singular TypeScript enums. (prefer-singular-enums)
 
-Provides consistent when naming [Enums](https://www.typescriptlang.org/docs/handbook/enums.html) within TypeScript code.
+Provides consistency when naming [enums](https://www.typescriptlang.org/docs/handbook/enums.html) within TypeScript code.
 
 ## Rule Details
 
-This rule enforces all TypeScript Enums to be singular. An error will occur if the enum is defined with a pluralized name.
+This rule enforces all TypeScript enums to be singular. An error will occur if the enum is defined with a pluralized name.
 
 Examples of **incorrect** code for this rule:
 
@@ -28,4 +28,4 @@ enum Page {
 
 ## When Not To Use It
 
-If you have established coding standards using a different naming convention for TypeScript Enums, you can safely disable this rule.
+If you have established coding standards using a different naming convention for TypeScript enums, you can safely disable this rule.
