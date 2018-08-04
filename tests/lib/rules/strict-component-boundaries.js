@@ -1,4 +1,5 @@
 const {RuleTester} = require('eslint');
+const {fixtureFile} = require('../../utilities');
 const rule = require('../../../lib/rules/strict-component-boundaries');
 
 const ruleTester = new RuleTester();
@@ -26,12 +27,9 @@ ruleTester.run('strict-component-boundaries', rule, {
       parserOptions,
     },
     {
-      code: `import fs from 'fs';`,
+      code: `import {getDisplayName} from '@shopify/react-utilities/components';`,
       parserOptions,
-    },
-    {
-      code: `import eslint from 'eslint';`,
-      parserOptions,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
     },
   ],
   invalid: [
