@@ -26,7 +26,7 @@ ruleTester.run('strict-component-boundaries', rule, {
       parserOptions,
     },
     {
-      code: `import someThing from '../OtherComponent/fixtures/mock-query.json';`,
+      code: `import someThing from '../fixtures/SomeMockQuery/query.json';`,
       parserOptions,
     },
   ],
@@ -48,6 +48,16 @@ ruleTester.run('strict-component-boundaries', rule, {
     },
     {
       code: `import someThing from './components/SomeComponent/any-path';`,
+      parserOptions,
+      errors,
+    },
+    {
+      code: `import someThing from '../SomeComponent/fixtures/SomeMockQuery/query.json';`,
+      parserOptions,
+      errors,
+    },
+    {
+      code: `import someThing from './components/SomeComponent/fixtures/SomeMockQuery/query.json';`,
       parserOptions,
       errors,
     },
