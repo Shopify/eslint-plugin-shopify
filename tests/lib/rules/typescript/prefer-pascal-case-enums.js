@@ -37,16 +37,19 @@ ruleTester.run('prefer-pascal-case-enums', rule, {
       code: `enum sort_order {MostRecent, LeastRecent, Newest, Oldest}`,
       parser: typeScriptParser,
       errors: [errorWithName('sort_order')],
+      output: `enum SortOrder {MostRecent, LeastRecent, Newest, Oldest}`,
     },
     {
       code: `enum sortOrder {MostRecent, LeastRecent, Newest, Oldest}`,
       parser: typeScriptParser,
       errors: [errorWithName('sortOrder')],
+      output: `enum SortOrder {MostRecent, LeastRecent, Newest, Oldest}`,
     },
     {
       code: `enum sortOrder {mostRecent, LeastRecent, Newest, Oldest}`,
       parser: typeScriptParser,
       errors: [errorWithName('sortOrder'), errorWithName('mostRecent')],
+      output: `enum SortOrder {MostRecent, LeastRecent, Newest, Oldest}`,
     },
     {
       code: `enum SortOrder {MOSTRECENT, least_recent, Newest, Oldest}`,

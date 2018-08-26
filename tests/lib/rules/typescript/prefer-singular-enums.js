@@ -35,32 +35,38 @@ ruleTester.run('prefer-singular-enums', rule, {
       code: `enum SortOrders {MostRecent, LeastRecent, Newest, Oldest}`,
       parser: typeScriptParser,
       errors: [errorWithName('SortOrders')],
+      output: `SortOrder`,
     },
     {
       code: `enum Commands {Up, Down}`,
       parser: typeScriptParser,
       errors: [errorWithName('Commands')],
+      output: `Command`,
     },
     {
       code: `enum Pages {Products, Orders}`,
       parser: typeScriptParser,
       errors: [errorWithName('Pages')],
+      output: `Page`,
     },
     {
       code: `enum Feet {Left, Right}`,
       parser: typeScriptParser,
       errors: [errorWithName('Feet')],
+      output: `Foot`,
     },
 
     {
       code: `enum People {}`,
       parser: typeScriptParser,
       errors: [errorWithName('People')],
+      output: `Person`,
     },
     {
       code: `enum Children {}`,
       parser: typeScriptParser,
       errors: [errorWithName('Children')],
+      output: `Child`,
     },
   ],
 });
