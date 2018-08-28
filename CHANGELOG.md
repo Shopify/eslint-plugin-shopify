@@ -17,6 +17,9 @@
 
 * Updated `plugin:shopify/prettier`, `plugin:shopify/react`, and `plugin:shopify/typescript` to use `overrides` ([#173](https://github.com/Shopify/eslint-plugin-shopify/pull/173))
 
+### Added
+* `shopify/no-ancestor-directory-import` ([#149](https://github.com/Shopify/eslint-plugin-shopify/pull/149))
+
 ## [25.1.0] - 2018-10-01
 
 ### Changed
