@@ -86,7 +86,7 @@
     "eslint-plugin-chai-expect": "1.1.1",
     "eslint-plugin-flowtype": "2.41.0",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jest": "21.14.1",
+    "eslint-plugin-jest": "^21.22.0",
     "eslint-plugin-jsx-a11y": "6.0.3",
     "eslint-plugin-lodash": "2.6.1",
     "eslint-plugin-mocha": "^5.2.0",
