@@ -451,7 +451,7 @@ ruleTester.run('no-vague-titles', rule, {
       errors: errorWithMethod('test'),
     },
     {
-      code: `test.each([['production'], ['staging']])('Includes all things for %s clients')`,
+      code: `test.each([['production'], ['staging']])('all correct for %s')`,
       parser,
       errors: errorWithMethod('test'),
     },
@@ -481,7 +481,7 @@ ruleTester.run('no-vague-titles', rule, {
       errors: errorWithMethod('xtest'),
     },
     {
-      code: `xtest.each([['production'], ['staging']])('Includes all things for %s clients')`,
+      code: `xtest.each([['production'], ['staging']])('all correct for %s')`,
       parser,
       errors: errorWithMethod('xtest'),
     },
@@ -526,7 +526,7 @@ ruleTester.run('no-vague-titles', rule, {
       errors: errorWithMethod('it'),
     },
     {
-      code: `it.each([['production'], ['staging']])('Includes all things for %s clients')`,
+      code: `it.each([['production'], ['staging']])('all correct for %s')`,
       parser,
       errors: errorWithMethod('it'),
     },
@@ -541,7 +541,7 @@ ruleTester.run('no-vague-titles', rule, {
       errors: errorWithMethod('xit'),
     },
     {
-      code: `xit.each([['production'], ['staging']])('Includes all things for %s clients')`,
+      code: `xit.each([['production'], ['staging']])('all correct for %s')`,
       parser,
       errors: errorWithMethod('xit'),
     },
@@ -556,7 +556,7 @@ ruleTester.run('no-vague-titles', rule, {
       errors: errorWithMethod('xdescribe'),
     },
     {
-      code: `xdescribe.each([['production'], ['staging']])('Includes all things for %s clients')`,
+      code: `xdescribe.each([['production'], ['staging']])('all correct for %s')`,
       parser,
       errors: errorWithMethod('xdescribe'),
     },
@@ -566,7 +566,7 @@ ruleTester.run('no-vague-titles', rule, {
       errors: errorWithMethod('describe'),
     },
     {
-      code: `describe.each([['production'], ['staging']])('Includes all things for %s clients')`,
+      code: `describe.each([['production'], ['staging']])('all correct for %s')`,
       parser,
       errors: errorWithMethod('describe'),
     },
@@ -631,7 +631,7 @@ ruleTester.run('no-vague-titles with ignore=describe', rule, {
       options: [{ignore: ['describe']}],
     },
     {
-      code: `describe.each([['production'], ['staging']])('Includes things all for %s clients')`,
+      code: `describe.each([['production'], ['staging']])('all correct for %s')`,
       options: [{ignore: ['describe']}],
     },
   ],
@@ -677,7 +677,7 @@ ruleTester.run('no-vague-titles with ignore=test', rule, {
       options: [{ignore: ['test']}],
     },
     {
-      code: `test.each([['production'], ['staging']])('Includes things all for %s clients')`,
+      code: `test.each([['production'], ['staging']])('all correct for %s')`,
       options: [{ignore: ['test']}],
     },
   ],
@@ -723,7 +723,7 @@ ruleTester.run('no-vague-titles with ignore=it', rule, {
       options: [{ignore: ['it']}],
     },
     {
-      code: `it.each([['production'], ['staging']])('Includes things all for %s clients')`,
+      code: `it.each([['production'], ['staging']])('all correct for %s')`,
       options: [{ignore: ['it']}],
     },
   ],
