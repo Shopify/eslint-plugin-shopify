@@ -10,13 +10,13 @@
 
 ### Changed
 * Namespaced `prefer-pascal-case-enums` and `prefer-singular-enums` under `typescript`. ([#141](https://github.com/Shopify/eslint-plugin-shopify/pull/141))
-* **Breaking:** Updated to eslint `v5.4.0`. Consuming projects must be using node [supported](https://eslint.org/docs/user-guide/migrating-to-5.0.0#-nodejs-4-is-no-longer-supported) versions, we recommend `^8.10.0`. See details on the v4 to v5 migration guide [here](https://eslint.org/docs/user-guide/migrating-to-5.0.0).
+* **Breaking:** Updated to eslint `v5.4.0`. Consuming projects must be using node [supported](https://eslint.org/docs/user-guide/migrating-to-5.0.0#-nodejs-4-is-no-longer-supported) versions, we recommend `^8.10.0`. See details on the v4 to v5 migration guide [here](https://eslint.org/docs/user-guide/migrating-to-5.0.0). ([#151](https://github.com/Shopify/eslint-plugin-shopify/pull/151))
 
 ### Added
 * `shopify/prefer-singular-enums` ([#132](https://github.com/Shopify/eslint-plugin-shopify/pull/132))
 * `shopify/react-no-multiple-render-methods` ([#134](https://github.com/Shopify/eslint-plugin-shopify/pull/134))
 
-* New eslint rules and plugins rules: ([#xxx](url))
+* New eslint rules and plugins rules: ([#151](https://github.com/Shopify/eslint-plugin-shopify/pull/151))
   * [`max-classes-per-file`](https://eslint.org/docs/rules/max-classes-per-file) (disabled)
   * [`no-self-assign`](https://eslint.org/docs/rules/no-self-assign)
   * [`require-unicode-regexp`](https://eslint.org/docs/rules/require-unicode-regexp) (disabled)
