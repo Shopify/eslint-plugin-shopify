@@ -376,7 +376,7 @@ babel-core@^6.26.3:
     slash "^1.0.0"
     source-map "^0.5.7"
 
-babel-eslint@9.0.0, babel-eslint@^9.0.0:
+babel-eslint@9.0.0:
   version "9.0.0"
   resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-9.0.0.tgz#7d9445f81ed9f60aff38115f838970df9f2b6220"
   dependencies:
@@ -1610,7 +1610,7 @@ eslint-plugin-react@7.11.1:
 "eslint-plugin-shopify@file:./.":
   version "23.1.0"
   dependencies:
-    babel-eslint "^9.0.0"
+    babel-eslint "9.0.0"
     eslint-config-prettier "3.0.1"
     eslint-module-utils "2.1.1"
     eslint-plugin-ava "5.1.0"
