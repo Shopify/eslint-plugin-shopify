@@ -32,7 +32,12 @@ ruleTester.run('strict-component-boundaries', rule, {
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
     },
     {
-      code: `import someThing from '../fixtures/SomeMockQuery/query.json';`,
+      code: `import someUtility from './utilities/someUtility';`,
+      parserOptions,
+      filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
+    },
+    {
+      code: `import someThing from './fixtures/SomeMockQuery/query.json';`,
       parserOptions,
     },
   ],
@@ -54,6 +59,11 @@ ruleTester.run('strict-component-boundaries', rule, {
     },
     {
       code: `import someThing from './components/SomeComponent/any-path';`,
+      parserOptions,
+      errors,
+    },
+    {
+      code: `import someThing from '../SomeOtherComponent/fixtures/SomeMockQuery/query.json';`,
       parserOptions,
       errors,
     },
