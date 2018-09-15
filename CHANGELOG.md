@@ -2,8 +2,12 @@
 
 <!-- ## Unreleased -->
 
-### Fixed
+### Added
 
+* `shopify/enzyme/no-bad-features` ([#163](https://github.com/Shopify/eslint-plugin-shopify/pull/163))
+
+
+### Fixed
 * `jest/no-vague-titles` no longer flags when the word `call` is used.
 
 ### Changed

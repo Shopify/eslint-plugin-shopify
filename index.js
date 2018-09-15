@@ -2,6 +2,7 @@ module.exports = {
   rules: {
     'binary-assignment-parens': require('./lib/rules/binary-assignment-parens'),
     'class-property-semi': require('./lib/rules/class-property-semi'),
+    'enzyme/no-bad-features': require('./lib/rules/enzyme/no-bad-features'),
     'jest/no-snapshots': require('./lib/rules/jest/no-snapshots'),
     'jest/no-vague-titles': require('./lib/rules/jest/no-vague-titles'),
     'jquery-dollar-sign-reference': require('./lib/rules/jquery-dollar-sign-reference'),
@@ -51,6 +52,7 @@ module.exports = {
     node: require('./lib/config/node'),
     polaris: require('./lib/config/polaris'),
     webpack: require('./lib/config/webpack'),
+    enzyme: require('./lib/config/enzyme'),
 
     // Prettier config - When extending, this must go last
     prettier: require('./lib/config/prettier'),
