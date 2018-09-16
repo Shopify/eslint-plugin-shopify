@@ -12,6 +12,17 @@
 
 * Updated `typescript-eslint-parser` dependency to version 19.0.2 to support `typescript-estree`. ([#176](https://github.com/Shopify/eslint-plugin-shopify/pull/176))
 
+### Added
+* `shopify/eslint-comments` plugin with [eslint-plugin-eslint-comments](https://www.npmjs.com/package/eslint-plugin-eslint-comments) rules:
+  - `eslint-comments/disable-enable-pair`,
+  - `eslint-comments/no-aggregating-enable`
+  - `eslint-comments/no-duplicate-disable`
+  - `eslint-comments/no-unlimited-disable`
+  - `eslint-comments/no-unused-disable`
+  - `eslint-comments/no-unused-enable`
+  - `eslint-comments/no-restricted-disable` (disabled)
+  - `eslint-comments/no-use` (disabled)
+
 ## [25.0.1] - 2018-09-25
 
 ### Fixed
