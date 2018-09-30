@@ -4,6 +4,7 @@
 
 ### Added
 * `shopify/no-ancestor-directory-import` ([#149](https://github.com/Shopify/eslint-plugin-shopify/pull/149))
+* `shopify/no-export-all` ([#174](https://github.com/Shopify/eslint-plugin-shopify/pull/174))
 
 ## [26.0.0] - 2018-10-26
 

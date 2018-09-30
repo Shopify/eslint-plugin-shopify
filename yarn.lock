@@ -1909,7 +1909,7 @@ eslint-plugin-react@7.11.1:
     prop-types "^15.6.2"
 
 "eslint-plugin-shopify@file:./.":
-  version "25.1.0"
+  version "26.0.0"
   dependencies:
     babel-eslint "9.0.0"
     eslint-config-prettier "3.0.1"
