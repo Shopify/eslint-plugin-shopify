@@ -2,16 +2,6 @@
 
 ## Unreleased
 
-### Changed
-
-* Updated `plugin:shopify/prettier`, `plugin:shopify/react`, and `plugin:shopify/typescript` to use `overrides` ([#173](https://github.com/Shopify/eslint-plugin-shopify/pull/173))
-
-## [25.1.0] - 2018-10-01
-
-### Changed
-
-* Updated `typescript-eslint-parser` dependency to version 19.0.2 to support `typescript-estree`. ([#176](https://github.com/Shopify/eslint-plugin-shopify/pull/176))
-
 ### Added
 * `shopify/eslint-comments` plugin with [eslint-plugin-eslint-comments](https://www.npmjs.com/package/eslint-plugin-eslint-comments) rules:
   - `eslint-comments/disable-enable-pair`,
@@ -22,6 +12,16 @@
   - `eslint-comments/no-unused-enable`
   - `eslint-comments/no-restricted-disable` (disabled)
   - `eslint-comments/no-use` (disabled)
+
+### Changed
+
+* Updated `plugin:shopify/prettier`, `plugin:shopify/react`, and `plugin:shopify/typescript` to use `overrides` ([#173](https://github.com/Shopify/eslint-plugin-shopify/pull/173))
+
+## [25.1.0] - 2018-10-01
+
+### Changed
+
+* Updated `typescript-eslint-parser` dependency to version 19.0.2 to support `typescript-estree`. ([#176](https://github.com/Shopify/eslint-plugin-shopify/pull/176))
 
 ## [25.0.1] - 2018-09-25
 
@@ -55,16 +55,6 @@
 ### Added
 
 * Added `shopify/graphql` config using new `eslint-plugin-graphql` (`2.1.1.`) dependency. ([#165](https://github.com/Shopify/eslint-plugin-shopify/pull/165))
-
-### Added
-* `shopify/eslint-comments` plugin with [eslint-plugin-eslint-comments](https://www.npmjs.com/package/eslint-plugin-eslint-comments) rules:
-  - `eslint-comments/no-aggregating-enable`
-  - `eslint-comments/no-duplicate-disable`
-  - `eslint-comments/no-unlimited-disable`
-  - `eslint-comments/no-unused-disable`
-  - `eslint-comments/no-unused-enable`
-  - `eslint-comments/no-restricted-disable` (disabled)
-  - `eslint-comments/no-use` (disabled)
 
 ## [24.0.0] - 2018-08-30
 
