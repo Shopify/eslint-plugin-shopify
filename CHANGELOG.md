@@ -283,6 +283,7 @@ Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules
 ### Added
 
 * `shopify/no-ancestor-directory-import` ([#149](https://github.com/Shopify/eslint-plugin-shopify/pull/149))
+* `shopify/no-all-mocks-methods` ([#204](https://github.com/Shopify/eslint-plugin-shopify/pull/204))
 
 ### Fixed
 
