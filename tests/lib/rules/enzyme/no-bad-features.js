@@ -9,7 +9,9 @@ function error(prop) {
   return [
     {
       type: 'Identifier',
-      message: `No bad enzyme features. Avoid using ${prop} on an enzyme wrapper.`,
+      message: rule.MESSAGES[prop]
+        ? rule.MESSAGES[prop]
+        : `No bad enzyme features. Avoid using ${prop} on an enzyme wrapper.`,
     },
   ];
 }
