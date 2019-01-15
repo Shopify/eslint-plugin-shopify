@@ -71,6 +71,22 @@ ruleTester.run('strict-component-boundaries', rule, {
         'strict-component-boundaries/app/components/Foo/components/Bar/index.js',
       ),
     },
+    {
+      code: `import mySectionIndexQuery from '../graphql/MySectionIndexQuery.graphql';`,
+      parserOptions,
+      errors,
+      filename: fixtureFile(
+        'strict-component-boundaries/app/sections/MySection/MySectionIndex/tests/MySectionIndex.e2e.js',
+      ),
+    },
+    {
+      code: `import mySectionDetailsQuery from '../../..//MySectionDetails/graphql/MySectionDetailsQuery.graphql';`,
+      parserOptions,
+      errors,
+      filename: fixtureFile(
+        'strict-component-boundaries/app/sections/MySection/MySectionIndex/tests/MySectionIndex.e2e.js',
+      ),
+    },
   ],
   invalid: [
     {
