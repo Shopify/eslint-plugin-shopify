@@ -225,5 +225,18 @@ ruleTester.run('no-if', rule, {
         },
       ],
     },
+    {
+      code: `it('foo', () => {
+        callExpression()
+        if ('bar') {}
+      })
+      `,
+      parser,
+      errors: [
+        {
+          messageId: 'noIf',
+        },
+      ],
+    },
   ],
 });

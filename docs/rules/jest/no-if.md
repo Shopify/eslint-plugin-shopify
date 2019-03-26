@@ -1,9 +1,9 @@
 # Prevent if statements in tests. (jest/no-if)
-This rule prevents the use of if statements in tests. 
+This rule prevents the use of if statements in tests.
 
 ## Rule Details
 
-If statments in tests is usually an indication that a test is attempting to cover too much. Each branch of code executing within an if statement will likely be better served by a test devoted to it.
+If statments in tests is usually an indication that a test is attempting to cover too much, and are at risk of not testing the logic they intend to. Each branch of code executing within an if statement will likely be better served by a test devoted to it.
 
 Examples of **incorrect** code for this rule:
 
