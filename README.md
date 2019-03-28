@@ -85,9 +85,6 @@ This plugin provides the following core configurations:
 This plugin also provides the following tool-specific configurations, which can be used on top of the core configurations:
 
 - [lodash](lib/config/lodash.js): Use this for projects that use [lodash](https://lodash.com).
-- [mocha](lib/config/mocha.js): Use this for projects that use [mocha](http://mochajs.org)/ [sinon](http://sinonjs.org)/ [chai](http://chaijs.com) for testing.
-- [ava](lib/config/ava.js): Use this for projects that use the [AVA test runner](https://github.com/sindresorhus/ava).
-- [flow](lib/config/flow.js): Use this for projects that use [flow](http://flowtype.org) for type checking.
 - [graphql](lib/config/graphql.js): Use this for projects that use [graphql-config](https://github.com/prisma/graphql-config) for graphql validation.
 - [jquery](lib/config/jquery.js): Use this for projects that use [jQuery](http://jquery.com).
 - [polaris](lib/config/polaris.js): Use this for projects that use [Shopify’s React Polaris components](https://polaris.shopify.com/components/get-started).

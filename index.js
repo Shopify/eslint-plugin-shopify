@@ -42,24 +42,15 @@ module.exports = {
     typescript: require('./lib/config/typescript'),
 
     // Augmenting configs - When extending, these go after the core config
-    ava: require('./lib/config/ava'),
-    'eslint-comments': require('./lib/config/eslint-comments'),
-    flow: require('./lib/config/flow'),
     graphql: require('./lib/config/graphql'),
     jest: require('./lib/config/jest'),
     jquery: require('./lib/config/jquery'),
     lodash: require('./lib/config/lodash'),
-    mocha: require('./lib/config/mocha'),
     node: require('./lib/config/node'),
     polaris: require('./lib/config/polaris'),
     webpack: require('./lib/config/webpack'),
 
     // Prettier config - When extending, this must go last
     prettier: require('./lib/config/prettier'),
-
-    // DEPREACATED - use 'prettier' instead
-    'typescript-prettier': require('./lib/config/prettier'),
-    // DEPREACATED - use 'typescript', then 'react' instead
-    'typescript-react': require('./lib/config/typescript-react'),
   },
 };
