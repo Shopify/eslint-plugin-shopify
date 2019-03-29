@@ -3,7 +3,52 @@
 <!-- ## Unreleased -->
 ### Added
 
+#### Plugin updates and additions ([#233](https://github.com/Shopify/eslint-plugin-shopify/pull/233))
+
+#### New rules
+
 * `shopify/jest/no-if` ([#232](https://github.com/Shopify/eslint-plugin-shopify/pull/232))
+
+Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules.html) to learn more about the followeing rules.
+
+* `'react-hooks/rules-of-hooks': 'error'`
+* `'react-hooks/exhaustive-deps': 'error'`
+
+
+#### Updated Plugins
+
+| Package | Old version | New version |
+| ------- | ----------- | ----------- |
+| `eslint-plugin-sort-class-members` | `1.3.1` | `1.4.0` |
+| `eslint-plugin-promise` | `4.0.0` | `4.0.1` |
+| `eslint-plugin-node` | `7.0.1` | `8.0.1` |
+| `eslint-plugin-lodash` | `2.6.1`  | `5.1.0` |
+| `eslint-plugin-jsx-a11y` | `6.1.1"`  | `6.2.1` |
+| `eslint-plugin-jest` | `21.22.0`  | `21.23.0` |
+| `eslint-plugin-import` | `2.14.0`  | `2.16.0` |
+| `eslint-plugin-graphql` | `2.1.0-0`  | `3.0.3` |
+| `eslint-plugin-eslint-comments` | `3.0.1`  | `3.1.1` |
+| `eslint-plugin-babel` | `5.1.0`  | `5.3.0` |
+| `eslint-plugin-utils` | `2.1.0`  | `2.3.0` |
+| `eslint-plugin-prettier` | `3.0.1`  | `4.1.0` |
+
+#### Added Plugins
+
+| Package | Version |
+| ------- | ------- |
+| eslint-plugin-react-hooks | 1.5.0 |
+| @typescript-eslint/eslint-plugin | 1.5.0 |
+| "@typescript-eslint/parser | 1.5.0 |
+| babel-eslint | 10.0.1 |
+
+#### Removed Plugins
+
+| Package |
+| ------- |
+| eslint-plugin-mocha |
+| eslint-plugin-ava |
+| eslint-plugin-flowtype |
+| eslint-plugin-chai-expect |
 
 ### Changed
 
