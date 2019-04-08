@@ -6,7 +6,6 @@ module.exports = {
     'jest/no-if': require('./lib/rules/jest/no-if'),
     'jest/no-snapshots': require('./lib/rules/jest/no-snapshots'),
     'jest/no-vague-titles': require('./lib/rules/jest/no-vague-titles'),
-    'jquery-dollar-sign-reference': require('./lib/rules/jquery-dollar-sign-reference'),
     'jsx-no-complex-expressions': require('./lib/rules/jsx-no-complex-expressions'),
     'jsx-no-hardcoded-content': require('./lib/rules/jsx-no-hardcoded-content'),
     'jsx-prefer-fragment-wrappers': require('./lib/rules/jsx-prefer-fragment-wrappers'),
@@ -44,8 +43,6 @@ module.exports = {
     // Augmenting configs - When extending, these go after the core config
     graphql: require('./lib/config/graphql'),
     jest: require('./lib/config/jest'),
-    jquery: require('./lib/config/jquery'),
-    lodash: require('./lib/config/lodash'),
     node: require('./lib/config/node'),
     polaris: require('./lib/config/polaris'),
     webpack: require('./lib/config/webpack'),

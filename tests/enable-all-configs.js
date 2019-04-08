@@ -14,8 +14,6 @@ module.exports = {
     // Augmenting configs - When extending, these go after the core config
     'plugin:self/graphql',
     'plugin:self/jest',
-    'plugin:self/jquery',
-    'plugin:self/lodash',
     'plugin:self/node',
     'plugin:self/polaris',
     'plugin:self/webpack',

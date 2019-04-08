@@ -82,7 +82,6 @@
     "eslint-plugin-import": "2.16.0",
     "eslint-plugin-jest": "22.3.0",
     "eslint-plugin-jsx-a11y": "6.2.1",
-    "eslint-plugin-lodash": "5.1.0",
     "eslint-plugin-node": "8.0.1",
     "eslint-plugin-prettier": "3.0.1",
     "eslint-plugin-promise": "4.0.1",
