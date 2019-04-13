@@ -41,6 +41,13 @@ ruleTester.run('hooks-strict-return', rule, {
     },
     {
       code: `function useFoo() {
+          return ['bar', () => {}]
+        }
+        `,
+      parser,
+    },
+    {
+      code: `function useFoo() {
         const bar = [1]
         const baz = [2]
         return [...bar, ...baz];
@@ -65,6 +72,7 @@ ruleTester.run('hooks-strict-return', rule, {
     },
     {
       code: `function useFoo() {
+        const bar = {one: 1, two: 2, three: 3}
         return {...bar}
       }
       `,
@@ -72,6 +80,7 @@ ruleTester.run('hooks-strict-return', rule, {
     },
     {
       code: `function useFoo() {
+        const bar = {one: 1, two: 2, three: 3}
         return {...bar, four: 4}
       }
       `,
@@ -79,9 +88,16 @@ ruleTester.run('hooks-strict-return', rule, {
     },
     {
       code: `function foo() {
-        return [1, 2, 3]
-      }
-      `,
+          return [1, 2, 3]
+        }
+        `,
+      parser,
+    },
+    {
+      code: `function foo() {
+          return [0, {one: 1, two: 2, three: 3}, 4, 5,]
+        }
+        `,
       parser,
     },
   ],
@@ -101,6 +117,17 @@ ruleTester.run('hooks-strict-return', rule, {
       code: `function useFoo() {
         const bar = [1, 2, 3]
         return bar;
+      }`,
+      parser,
+      errors: [
+        {
+          messageId: 'hooksStrictReturn',
+        },
+      ],
+    },
+    {
+      code: `function useFoo() {
+        return [,,,]
       }`,
       parser,
       errors: [
