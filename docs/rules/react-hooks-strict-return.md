@@ -1,4 +1,4 @@
-# Enforce stict return style from React hooks.(hooks-strict-return)
+# Restrict the number of returned items from React hooks. (react-hooks-strict-return)
 
 Where possible, return two or fewer values from a hook, and return them in a tuple, like `React.useState` (if you have no choice but to return more than three values, return them as a single object instead).
 

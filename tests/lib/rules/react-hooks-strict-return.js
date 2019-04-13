@@ -1,13 +1,18 @@
 const {RuleTester} = require('eslint');
-const rule = require('../../../lib/rules/hooks-strict-return');
+const rule = require('../../../lib/rules/react-hooks-strict-return');
 
 const ruleTester = new RuleTester();
 
 require('babel-eslint');
 
 const parser = 'babel-eslint';
+const errors = [
+  {
+    messageId: 'hooksStrictReturn',
+  },
+];
 
-ruleTester.run('hooks-strict-return', rule, {
+ruleTester.run('react-hooks-strict-return', rule, {
   valid: [
     {
       code: `function useFoo() {
@@ -88,16 +93,56 @@ ruleTester.run('hooks-strict-return', rule, {
     },
     {
       code: `function foo() {
-          return [1, 2, 3]
-        }
-        `,
+        return [1, 2, 3]
+      }
+      `,
       parser,
     },
     {
       code: `function foo() {
-          return [0, {one: 1, two: 2, three: 3}, 4, 5,]
-        }
-        `,
+        return [0, {one: 1, two: 2, three: 3}, 4, 5,]
+      }
+      `,
+      parser,
+    },
+    {
+      code: `function useFoo() {
+        return null
+      }
+      `,
+      parser,
+    },
+    {
+      code: `function useFoo() {
+        return 1
+      }
+      `,
+      parser,
+    },
+    {
+      code: `function useFoo() {}`,
+      parser,
+    },
+    {
+      code: `function useFoo() {
+        return 'bar';
+      }`,
+      parser,
+    },
+    {
+      code: `function useFoo() {
+        return 'bar';
+      }
+      function baz() {
+        return [1, 2, 3, 4]
+      }`,
+      parser,
+    },
+    {
+      code: `function useFoo() {
+        const bar = 1;
+        return [bar, () => {}];
+      }`,
       parser,
     },
   ],
@@ -107,11 +152,7 @@ ruleTester.run('hooks-strict-return', rule, {
         return [1, 2, 3]
       }`,
       parser,
-      errors: [
-        {
-          messageId: 'hooksStrictReturn',
-        },
-      ],
+      errors,
     },
     {
       code: `function useFoo() {
@@ -119,22 +160,22 @@ ruleTester.run('hooks-strict-return', rule, {
         return bar;
       }`,
       parser,
-      errors: [
-        {
-          messageId: 'hooksStrictReturn',
-        },
-      ],
+      errors,
+    },
+    {
+      code: `const useFoo = () => {
+        const bar = [1, 2, 3]
+        return bar;
+      }`,
+      parser,
+      errors,
     },
     {
       code: `function useFoo() {
         return [,,,]
       }`,
       parser,
-      errors: [
-        {
-          messageId: 'hooksStrictReturn',
-        },
-      ],
+      errors,
     },
     {
       code: `function useFoo() {
@@ -142,11 +183,15 @@ ruleTester.run('hooks-strict-return', rule, {
         return [...bar]
       }`,
       parser,
-      errors: [
-        {
-          messageId: 'hooksStrictReturn',
-        },
-      ],
+      errors,
+    },
+    {
+      code: `const useFoo = () => {
+        const bar = [1, 2, 3]
+        return [...bar]
+      }`,
+      parser,
+      errors,
     },
     {
       code: `function useFoo() {
@@ -155,11 +200,7 @@ ruleTester.run('hooks-strict-return', rule, {
         return [...bar, ...baz];
       }`,
       parser,
-      errors: [
-        {
-          messageId: 'hooksStrictReturn',
-        },
-      ],
+      errors,
     },
   ],
 });
