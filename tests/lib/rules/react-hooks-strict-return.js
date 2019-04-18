@@ -202,5 +202,33 @@ ruleTester.run('react-hooks-strict-return', rule, {
       parser,
       errors,
     },
+    {
+      code: `function useFoo() {
+        useEffect(() => {});
+      
+        return [1, 2, 3, 4];
+      }`,
+      parser,
+      errors,
+    },
+    {
+      code: `function useFoo() {
+        useSomeOtherHook();
+      
+        return [1, 2, 3, 4];
+      }`,
+      parser,
+      errors,
+    },
+    {
+      code: `function useFoo() {
+        useSomeOtherHook();
+        useEffect(() => {});
+      
+        return [1, 2, 3, 4];
+      }`,
+      parser,
+      errors,
+    },
   ],
 });
