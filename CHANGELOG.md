@@ -6,6 +6,9 @@
 - New Rules: `node/prefer-promises/dns` and `node/prefer-promises/fs`. These rules disallow the callback API in favor of promise API for the dns and fs modules. ([257](https://github.com/Shopify/eslint-plugin-shopify/pull/257))
 - New Rule: `jest/no-mocks-import`. This rule disallows manually importing from `__mocks__`.
 
+### Fixed
+- `react-prefer-private-members` from incorrectly remporting the members of a parent class if a React class is defined within its constructor.  
+
 ## [28.0.0] - 2019-04-26
 
 ### Changed
