@@ -7,7 +7,7 @@
 - New Rule: `jest/no-mocks-import`. This rule disallows manually importing from `__mocks__`.
 
 ### Fixed
-- `react-prefer-private-members` from incorrectly remporting the members of a parent class if a React class is defined within its constructor.  
+- `react-prefer-private-members` from incorrectly reporting the members of a parent class if a React class is defined within its constructor. ([258](https://github.com/Shopify/eslint-plugin-shopify/pull/258))
 
 ## [28.0.0] - 2019-04-26
 
