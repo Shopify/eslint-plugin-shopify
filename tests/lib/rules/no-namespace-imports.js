@@ -8,11 +8,6 @@ require('typescript-eslint-parser');
 
 const parserOptions = {ecmaVersion: 6, sourceType: 'module'};
 
-const error = {
-  type: 'ImportDeclaration',
-  message: `Prefer name-spaced React import. (import * as React from 'react';).`,
-};
-
 ruleTester.run('no-namespace-imports', rule, {
   valid: [
     {
@@ -41,6 +36,7 @@ ruleTester.run('no-namespace-imports', rule, {
           messageId: 'namespaceImport',
         },
       ],
+      output: `import React from 'react';`,
     },
     {
       code: `import * as H from 'history';`,
@@ -50,6 +46,7 @@ ruleTester.run('no-namespace-imports', rule, {
           messageId: 'namespaceImport',
         },
       ],
+      output: `import H from 'history';`,
     },
     {
       code: `import * as faker from 'faker';`,
@@ -59,6 +56,7 @@ ruleTester.run('no-namespace-imports', rule, {
           messageId: 'namespaceImport',
         },
       ],
+      output: `import faker from 'faker';`,
     },
   ],
 });
