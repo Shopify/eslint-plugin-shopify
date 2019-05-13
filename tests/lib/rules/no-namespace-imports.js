@@ -26,6 +26,15 @@ ruleTester.run('no-namespace-imports', rule, {
       code: `import {Location} from 'history';`,
       parserOptions,
     },
+    {
+      code: `import * as Foo from 'foo';`,
+      parserOptions,
+    },
+    {
+      code: `import * as React from 'react';`,
+      parserOptions,
+      options: [{ignore: ['react']}],
+    },
   ],
   invalid: [
     {
@@ -57,6 +66,28 @@ ruleTester.run('no-namespace-imports', rule, {
         },
       ],
       output: `import faker from 'faker';`,
+    },
+    {
+      code: `import * as foo from 'foo';`,
+      parserOptions,
+      errors: [
+        {
+          messageId: 'namespaceImport',
+        },
+      ],
+      options: [{modules: ['foo']}],
+      output: `import foo from 'foo';`,
+    },
+    {
+      code: `import * as React from 'react';`,
+      parserOptions,
+      errors: [
+        {
+          messageId: 'namespaceImport',
+        },
+      ],
+      options: [{modules: ['bar']}],
+      output: `import React from 'react';`,
     },
   ],
 });
