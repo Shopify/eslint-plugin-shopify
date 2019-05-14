@@ -1,4 +1,4 @@
-# TODO. (no-namespace-imports)
+# Prevent namespace import declarations. (no-namespace-imports)
 
 Please describe the origin of the rule here.
 
