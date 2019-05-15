@@ -4,7 +4,7 @@
 
 ### Changed
 
-- added "necessary" to `shopify/jest/no-vague-titles`
+- added "necessary" to `shopify/jest/no-vague-titles` ([265](https://github.com/Shopify/eslint-plugin-shopify/pull/265))
 
 ### Added
 
