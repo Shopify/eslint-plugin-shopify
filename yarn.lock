@@ -1081,12 +1081,13 @@ babel-plugin-transform-inline-environment-variables@^0.4.3:
   integrity sha1-o7CYgzU76LXiM24/8e+KXZP5xIk=
 
 babel-preset-shopify@^19.0.0:
-  version "19.0.0"
-  resolved "https://registry.yarnpkg.com/babel-preset-shopify/-/babel-preset-shopify-19.0.0.tgz#bd936332f7668414a93104913eafc7fb9779bddc"
-  integrity sha512-B4pJTFfC+YR6O9Wnd2f6vQeUlUf6vyoW2jRYbe2eSQCdVl7ZqFxygfGH3ED934k91ZWbH1C0Xw44XpllYocgLw==
+  version "19.0.1"
+  resolved "https://registry.yarnpkg.com/babel-preset-shopify/-/babel-preset-shopify-19.0.1.tgz#e36c64bec938ff2fd10740ecb177241b17eca581"
+  integrity sha512-Z5Impy66J51y9V7Wr/3p30qs9vnllZ+1q6m8XwD6+HE4408k7ZatYubERNDWPR6hgC8/YF3i0+KvDyOTq9wk8w==
   dependencies:
     "@babel/core" "^7.4.3"
     "@babel/plugin-proposal-class-properties" "^7.4.0"
+    "@babel/plugin-proposal-optional-catch-binding" "^7.2.0"
     "@babel/plugin-syntax-dynamic-import" "^7.2.0"
     "@babel/plugin-transform-react-constant-elements" "^7.2.0"
     "@babel/preset-env" "^7.4.3"
