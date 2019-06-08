@@ -7,6 +7,7 @@
 - added "necessary" to `shopify/jest/no-vague-titles` ([265](https://github.com/Shopify/eslint-plugin-shopify/pull/265))
 - `shopify/jest/no-if` now recognizes conditional statements ([298](https://github.com/Shopify/eslint-plugin-shopify/pull/298))
 
+
 ### Added
 
 - New Rules:
@@ -18,6 +19,7 @@
 
 ### Fixed
 
+- `shopify/jest/no-if` ignores if statements nested withing block statements ([](https://github.com/Shopify/eslint-plugin-shopify/pull/))
 - `react-prefer-private-members` from incorrectly reporting the members of a parent class if a React class is defined within its constructor. ([258](https://github.com/Shopify/eslint-plugin-shopify/pull/258))
 
 ## [28.0.0] - 2019-04-26
