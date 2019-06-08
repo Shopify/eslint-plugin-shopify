@@ -29,11 +29,29 @@ ruleTester.run('no-namespace-imports', rule, {
     {
       code: `import * as Foo from 'foo';`,
       parserOptions,
+      options: [{allow: ['foo']}],
     },
     {
-      code: `import * as React from 'react';`,
+      code: `import * as testing from '@shopify/react-testing';`,
       parserOptions,
-      options: [{ignore: ['react']}],
+      errors: [
+        {
+          messageId: 'namespaceImport',
+        },
+      ],
+      options: [{allow: ['foo', 'shopify/*']}],
+    },
+    {
+      code: `
+        import * as Foo from 'foo';
+        import * as testing from '@shopify/react-testing';`,
+      parserOptions,
+      errors: [
+        {
+          messageId: 'namespaceImport',
+        },
+      ],
+      options: [{allow: ['foo', 'shopify/*']}],
     },
   ],
   invalid: [
@@ -68,17 +86,6 @@ ruleTester.run('no-namespace-imports', rule, {
       output: `import faker from 'faker';`,
     },
     {
-      code: `import * as foo from 'foo';`,
-      parserOptions,
-      errors: [
-        {
-          messageId: 'namespaceImport',
-        },
-      ],
-      options: [{modules: ['foo']}],
-      output: `import foo from 'foo';`,
-    },
-    {
       code: `import * as React from 'react';`,
       parserOptions,
       errors: [
@@ -86,8 +93,25 @@ ruleTester.run('no-namespace-imports', rule, {
           messageId: 'namespaceImport',
         },
       ],
-      options: [{modules: ['bar']}],
+      options: [{allow: ['bar']}],
       output: `import React from 'react';`,
+    },
+    {
+      code: `
+        import * as Foo from 'foo';
+        import * as testing from '@shopify/react-testing';
+      `,
+      parserOptions,
+      errors: [
+        {
+          messageId: 'namespaceImport',
+        },
+      ],
+      options: [{allow: ['shopify/*']}],
+      output: `
+        import Foo from 'foo';
+        import * as testing from '@shopify/react-testing';
+      `,
     },
   ],
 });
