@@ -8,6 +8,7 @@
 - `shopify/jest/no-if` now recognizes conditional statements ([298](https://github.com/Shopify/eslint-plugin-shopify/pull/298))
 
 
+
 ### Added
 
 - New Rules:
