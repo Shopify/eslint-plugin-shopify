@@ -136,13 +136,6 @@ ruleTester.run('no-if', rule, {
     },
     {
       code: `it('foo', () => {
-        const foo = () => bar ? baz : qux;
-      })
-      `,
-      parser,
-    },
-    {
-      code: `it('foo', () => {
         const foo = bar(() => qux ? qux() : false);
       });
       `,
