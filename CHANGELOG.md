@@ -4,9 +4,7 @@
 
 ### Changed
 
-## [29.0.2] - 2019-06-18
-
-- Removed `react/prop-types` in typescript config ([310](https://github.com/Shopify/eslint-plugin-shopify/pull/310))
+- Removed `react/prop-types` in typescript config ([309](https://github.com/Shopify/eslint-plugin-shopify/pull/309))
 
 ## [29.0.1] - 2019-06-18
 
