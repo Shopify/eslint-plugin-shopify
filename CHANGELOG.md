@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+### New Rules
+- `react-import-first` Ensure React is the first import statement ([ADD ME](https://github.com/Shopify/eslint-plugin-shopify/pull/ADD ME))
+
 ### Changed
 
 - Enabled `typescript/interface-name-prefix` to prevent `I` prefixes in TypeScript interface names
