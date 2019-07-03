@@ -131,7 +131,7 @@ ruleTester.run('no-if', rule, {
         const foo = bar => {
           return foo ? bar : null;
         };
-    });`,
+      });`,
     },
   ],
   invalid: [
