@@ -24,7 +24,8 @@
     "lint": "eslint . --max-warnings 0 --format codeframe",
     "prettier": "eslint --format codeframe . --fix",
     "prettier-check": "eslint --print-config ./lib/config/prettier.js | eslint-config-prettier-check",
-    "test": "jest"
+    "test": "jest",
+    "dev": ""
   },
   "license": "MIT",
   "babel": {
@@ -82,6 +83,7 @@
     "@typescript-eslint/parser": "^2.3.3",
     "babel-eslint": "10.0.3",
     "common-tags": "^1.8.0",
+    "create-shopify": "^0.4.29",
     "eslint-config-prettier": "6.0.0",
     "eslint-import-resolver-typescript": "^1.1.1",
     "eslint-module-utils": "2.4.1",
