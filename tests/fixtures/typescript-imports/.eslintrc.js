@@ -1,6 +1,6 @@
 module.exports = {
   plugins: ['self'],
-  extends: ['plugin:self/node', 'plugin:self/typescript'],
+  extends: ['plugin:self/typescript', 'plugin:self/node'],
   parserOptions: {
     project: 'tsconfig.json',
     tsconfigRootDir: __dirname,
