@@ -1,6 +1,6 @@
 # Prevent namespace import declarations. (no-namespace-imports)
 
-Namespace imports grab all exported variables from a module as nested properties under a single variable name. This approach of importing everything, rather than only what is required from the module, leads to a polluted local scope from the unused components that were brought in under the module namespace.
+Namespace imports grab all exported variables from a module as nested properties under a single variable name. This approach of importing everything, rather than only what is required from the module, hinders [tree-shaking](https://webpack.js.org/guides/tree-shaking/) and is seen broadly as a bad practise.
 
 ## Rule Details
 
@@ -10,7 +10,7 @@ Examples of **incorrect** code for this rule:
 
 ```ts
 
-import * as React from 'react';
+import * as Foo from 'foo';
 
 ```
 
@@ -18,7 +18,7 @@ Examples of **correct** code for this rule:
 
 ```ts
 
-import React from 'react';
+import Foo from 'foo';
 
 ```
 
@@ -29,7 +29,7 @@ import React from 'react';
   "shopify/no-namespace-imports": [
     "error",
     {
-      "allow": ["react", "some-custom-module"]
+      "allow": ["foo", "bar"]
     }
   ]
 }
