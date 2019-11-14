@@ -108,10 +108,6 @@ ruleTester.run('no-namespace-imports', rule, {
         },
       ],
       options: [{allow: ['shopify/*']}],
-      output: `
-        import Foo from 'foo';
-        import * as testing from '@shopify/react-testing';
-      `,
     },
   ],
 });
