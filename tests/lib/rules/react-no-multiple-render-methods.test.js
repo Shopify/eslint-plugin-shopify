@@ -59,6 +59,6 @@ ruleTester.run('react-no-multiple-render-methods', rule, {
         error('renderArrowFunction', 'ArrowFunctionExpression'),
         error('renderBar', 'ArrowFunctionExpression'),
       ],
-    }
+    },
   ],
 });
